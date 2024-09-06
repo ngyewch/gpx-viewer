@@ -9,7 +9,8 @@
     "check": "svelte-check --tsconfig ./tsconfig.json --compiler-warnings a11y-click-events-have-key-events:ignore",
     "watch:check": "svelte-check --tsconfig ./tsconfig.json --watch --compiler-warnings a11y-click-events-have-key-events:ignore",
     "dev": "run-p watch:check doDev",
-    "build": "run-s check doBuild"
+    "build": "run-s check doBuild",
+    "deploy": "gh-pages -d dist --nojekyll"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "3.1.2",
