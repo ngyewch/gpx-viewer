@@ -61,9 +61,17 @@ export default class ChartControl extends Control {
                 scales: {
                     x: {
                         type: 'linear',
+                        title: {
+                            display: true,
+                            text: 'Time (s)',
+                        },
                     },
                     y: {
                         type: 'linear',
+                        title: {
+                            display: true,
+                            text: ['Cumulative', 'distance (m)'],
+                        },
                     }
                 },
                 interaction: {
