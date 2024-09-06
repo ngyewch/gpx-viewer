@@ -1,4 +1,5 @@
 import 'leaflet/dist/leaflet.css';
+import 'sweetalert2/src/sweetalert2.scss';
 
 import App from './App.svelte';
 

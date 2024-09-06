@@ -15,18 +15,20 @@
     "@sveltejs/vite-plugin-svelte": "3.1.2",
     "@tsconfig/svelte": "5.0.4",
     "@types/leaflet": "1.9.12",
+    "@types/micromodal": "0.3.5",
     "gh-pages": "6.1.1",
     "npm-run-all": "4.1.5",
+    "sass-embedded": "1.78.0",
     "svelte-check": "4.0.1",
     "typescript": "5.5.4",
     "vite": "5.4.3"
   },
   "dependencies": {
+    "@we-gold/gpxjs": "1.0.12",
     "leaflet": "1.9.4",
-    "svelte": "4.2.19"
-  },
-  "_dependencies": {
-    "@svgdotjs/svg.js": "3.2.4",
-    "date-fns": "3.6.0"
+    "micromodal": "0.4.10",
+    "svelte": "4.2.19",
+    "svelte-file-dropzone": "2.0.8",
+    "sweetalert2": "11.13.2"
   }
 }

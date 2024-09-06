@@ -1,0 +1,39 @@
+.leaflet-control-custom-button {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.leaflet-control-custom-button a {
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+.leaflet-control-custom-button a:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+.leaflet-touch .leaflet-control-custom-button {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    box-shadow: none;
+}
+
+.leaflet-touch .leaflet-control-custom-button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    font-size: 28px;
+}
+
+.leaflet-touch .leaflet-control-custom-button-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    font-size: 16px;
+}
