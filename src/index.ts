@@ -1,4 +1,6 @@
 import 'leaflet/dist/leaflet.css';
+import {Icon} from 'leaflet';
+Icon.Default.imagePath = '/gpx-viewer/images/';
 
 import 'sweetalert2/src/sweetalert2.scss';
 
