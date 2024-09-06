@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@we-gold/gpxjs": "1.0.12",
+    "chart.js": "4.4.4",
     "leaflet": "1.9.4",
     "micromodal": "0.4.10",
     "svelte": "4.2.19",

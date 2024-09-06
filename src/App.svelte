@@ -7,24 +7,30 @@
         Control,
         LayerGroup,
         Polyline,
-        type LatLngExpression, LatLng, LatLngBounds
+        type LatLngExpression, LatLng, LatLngBounds, type ControlOptions, Marker, Circle
     } from 'leaflet';
     import MicroModal from 'micromodal';
     import Dropzone from 'svelte-file-dropzone';
     import {ParsedGPX, parseGPX} from '@we-gold/gpxjs';
     import Swal from 'sweetalert2';
     import CustomButtonControl, {FontAwesomeIcon} from './CustomButtonControl.js';
+    import ChartControl from './ChartControl.js';
 
     let mapElement: HTMLDivElement;
     let map: LeafletMap;
     let layerGroup: LayerGroup;
     let gpx: ParsedGPX | undefined;
+    let marker: Marker | undefined;
+    let chartControl: ChartControl | undefined;
 
     onMount(() => {
         if (!mapElement) {
             return;
         }
+        initMap();
+    });
 
+    function initMap(): void {
         const mapOptions: MapOptions = {
             center: [1.3521, 103.8198],
             zoom: 3,
@@ -32,7 +38,19 @@
 
         map = new LeafletMap(mapElement, mapOptions);
 
+        chartControl = new ChartControl({
+            position: 'bottomright',
+            onHover: (index: number) => {
+                if (marker && gpx && (gpx.tracks.length > 0) && (index < gpx.tracks[0].points.length)) {
+                    const point = gpx.tracks[0].points[index];
+                    marker.setLatLng(new LatLng(point.latitude, point.longitude, (point.elevation !== null) ? point.elevation : undefined));
+                }
+            },
+        });
+        chartControl.addTo(map);
+
         const scaleControl = new Control.Scale({
+            position: 'bottomright',
             maxWidth: 200,
         });
         scaleControl.addTo(map);
@@ -68,7 +86,7 @@
 
         layerGroup = new LayerGroup();
         layerGroup.addTo(map);
-    });
+    }
 
     function handleFilesSelect(e: CustomEvent) {
         MicroModal.close('modal-1');
@@ -89,21 +107,43 @@
                         gpx = gpx1;
                         console.log(gpx);
                         layerGroup.clearLayers();
-                        let bounds: LatLngBounds | undefined = undefined;
+                        if (marker) {
+                            marker.remove();
+                        }
+                        marker = undefined;
+                        let bounds: LatLngBounds = new LatLngBounds([]);
                         for (let i = 0; i < gpx.tracks.length; i++) {
                             const track = gpx.tracks[i];
-                            let latLngs: LatLngExpression[] = []
+                            let latLngs: LatLngExpression[] = [];
                             for (let j = 0; j < track.points.length; j++) {
                                 const point = track.points[j];
-                                latLngs.push(new LatLng(point.latitude, point.longitude, (point.elevation !== null) ? point.elevation : undefined));
+                                const latLng = new LatLng(point.latitude, point.longitude, (point.elevation !== null) ? point.elevation : undefined);
+                                if ((i == 0) && (j == 0)) {
+                                    marker = new Marker(latLng);
+                                    marker.addTo(map);
+                                }
+                                latLngs.push(latLng);
                             }
-                            const polyline = new Polyline(latLngs);
+                            const polyline = new Polyline(latLngs, {
+                                opacity: 0.5,
+                            });
                             polyline.addTo(layerGroup);
-                            if (bounds) {
-                                bounds = bounds.extend(polyline.getBounds());
-                            } else {
-                                bounds = polyline.getBounds();
+                            bounds = bounds.extend(polyline.getBounds());
+                            if (chartControl) {
+                                chartControl.setTrack(track);
                             }
+                            break; // NOTE only handle first track
+                        }
+                        for (let i = 0; i < gpx.tracks.length; i++) {
+                            const track = gpx.tracks[i];
+                            for (let j = 0; j < track.points.length; j++) {
+                                const point = track.points[j];
+                                const latLng = new LatLng(point.latitude, point.longitude, (point.elevation !== null) ? point.elevation : undefined);
+                                new Circle(latLng, {
+                                    radius: 1,
+                                }).addTo(layerGroup);
+                            }
+                            break; // NOTE only handle first track
                         }
                         if (bounds) {
                             map.fitBounds(bounds);
