@@ -1,4 +1,5 @@
 import 'leaflet/dist/leaflet.css';
+
 import 'sweetalert2/src/sweetalert2.scss';
 
 import {Chart, LineController, LineElement, PointElement, CategoryScale, LinearScale, Tooltip} from 'chart.js';

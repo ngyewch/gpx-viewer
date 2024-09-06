@@ -7,8 +7,9 @@
         Control,
         LayerGroup,
         Polyline,
-        type LatLngExpression, LatLng, LatLngBounds, type ControlOptions, Marker, Circle
+        type LatLngExpression, LatLng, LatLngBounds, Marker, Circle
     } from 'leaflet';
+
     import MicroModal from 'micromodal';
     import Dropzone from 'svelte-file-dropzone';
     import {ParsedGPX, parseGPX} from '@we-gold/gpxjs';
