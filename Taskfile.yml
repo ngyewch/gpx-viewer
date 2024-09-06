@@ -22,3 +22,9 @@ tasks:
     deps: [ install ]
     cmds:
       - pnpm run dev
+
+  deploy:
+    desc: Deploy
+    deps: [ build ]
+    cmds:
+      - pnpm run deploy
