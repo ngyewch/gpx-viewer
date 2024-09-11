@@ -27,8 +27,8 @@ importers:
         specifier: 2.0.8
         version: 2.0.8(svelte@4.2.19)
       sweetalert2:
-        specifier: 11.13.2
-        version: 11.13.2
+        specifier: 11.14.0
+        version: 11.14.0
     devDependencies:
       '@sveltejs/vite-plugin-svelte':
         specifier: 3.1.2
@@ -53,10 +53,10 @@ importers:
         version: 1.78.0
       svelte-check:
         specifier: 4.0.1
-        version: 4.0.1(svelte@4.2.19)(typescript@5.5.4)
+        version: 4.0.1(svelte@4.2.19)(typescript@5.6.2)
       typescript:
-        specifier: 5.5.4
-        version: 5.5.4
+        specifier: 5.6.2
+        version: 5.6.2
       vite:
         specifier: 5.4.3
         version: 5.4.3(@types/node@22.5.4)(sass-embedded@1.78.0)
@@ -1187,8 +1187,8 @@ packages:
     resolution: {integrity: sha512-IY1rnGr6izd10B0A8LqsBfmlT5OILVuZ7XsI0vdGPEvuonFV7NYEUK4dAkm9Zg2q0Um92kYjTpS1CAP3Nh/KWw==}
     engines: {node: '>=16'}
 
-  sweetalert2@11.13.2:
-    resolution: {integrity: sha512-Q361QVJrDce3pA+46m2JmfDQyxxlmVE6t7ScoMwubm2PQKTlUqaMpzWq/DZRSPL8Sg2hUCzUAXQ9dwMPnbsy7Q==}
+  sweetalert2@11.14.0:
+    resolution: {integrity: sha512-kF1Q/+GtZZXr+rYVcBNwlEsnxP089CpDbck+MYjvLaQj9x4fzHqN9UhlkHOIR0k09LVu2sx8cU9BnvRlxWIZqg==}
 
   to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
@@ -1217,8 +1217,8 @@ packages:
     resolution: {integrity: sha512-/OxDN6OtAk5KBpGb28T+HZc2M+ADtvRxXrKKbUwtsLgdoxgX13hyy7ek6bFRl5+aBs2yZzB0c4CnQfAtVypW/g==}
     engines: {node: '>= 0.4'}
 
-  typescript@5.5.4:
-    resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
+  typescript@5.6.2:
+    resolution: {integrity: sha512-NW8ByodCSNCwZeghjN3o+JX5OFH0Ojg6sadjEKY4huZ52TqbJTJnDo5+Tw98lSy63NZvi4n+ez5m2u5d4PkZyw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2378,7 +2378,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-check@4.0.1(svelte@4.2.19)(typescript@5.5.4):
+  svelte-check@4.0.1(svelte@4.2.19)(typescript@5.6.2):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       chokidar: 3.6.0
@@ -2386,7 +2386,7 @@ snapshots:
       picocolors: 1.0.1
       sade: 1.8.1
       svelte: 4.2.19
-      typescript: 5.5.4
+      typescript: 5.6.2
     transitivePeerDependencies:
       - picomatch
 
@@ -2416,7 +2416,7 @@ snapshots:
       magic-string: 0.30.11
       periscopic: 3.1.0
 
-  sweetalert2@11.13.2: {}
+  sweetalert2@11.14.0: {}
 
   to-regex-range@5.0.1:
     dependencies:
@@ -2460,7 +2460,7 @@ snapshots:
       is-typed-array: 1.1.13
       possible-typed-array-names: 1.0.0
 
-  typescript@5.5.4: {}
+  typescript@5.6.2: {}
 
   unbox-primitive@1.0.2:
     dependencies:
