@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@we-gold/gpxjs':
-        specifier: 1.0.12
-        version: 1.0.12
+        specifier: 1.1.0
+        version: 1.1.0
       chart.js:
         specifier: 4.4.9
         version: 4.4.9
@@ -53,10 +53,10 @@ importers:
         version: 1.89.0
       svelte-check:
         specifier: 4.2.1
-        version: 4.2.1(picomatch@4.0.2)(svelte@4.2.19)(typescript@5.6.3)
+        version: 4.2.1(picomatch@4.0.2)(svelte@4.2.19)(typescript@5.8.3)
       typescript:
-        specifier: 5.6.3
-        version: 5.6.3
+        specifier: 5.8.3
+        version: 5.8.3
       vite:
         specifier: 6.3.5
         version: 6.3.5(@types/node@22.5.4)(sass-embedded@1.89.0)
@@ -389,8 +389,8 @@ packages:
   '@types/node@22.5.4':
     resolution: {integrity: sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==}
 
-  '@we-gold/gpxjs@1.0.12':
-    resolution: {integrity: sha512-bQtDgSyKyAY80o/VZvcfHjZ1PK3LEIdgEmHAtZLAgE7TGcDFdepaMRCal436fEBJqMEjZqP2hnXadmnwpoBXRQ==}
+  '@we-gold/gpxjs@1.1.0':
+    resolution: {integrity: sha512-oH1QDdpyBR47XmhOJti6mXtN8bpLviI5hwY3I5koOb41WWZQtmIXSwSceXFv7HSLymBdnEz3bykJZffBTAoQeg==}
 
   acorn@8.12.1:
     resolution: {integrity: sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==}
@@ -953,8 +953,8 @@ packages:
   tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
 
-  typescript@5.6.3:
-    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
+  typescript@5.8.3:
+    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -1243,7 +1243,7 @@ snapshots:
       undici-types: 6.19.8
     optional: true
 
-  '@we-gold/gpxjs@1.0.12': {}
+  '@we-gold/gpxjs@1.1.0': {}
 
   acorn@8.12.1: {}
 
@@ -1714,7 +1714,7 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
-  svelte-check@4.2.1(picomatch@4.0.2)(svelte@4.2.19)(typescript@5.6.3):
+  svelte-check@4.2.1(picomatch@4.0.2)(svelte@4.2.19)(typescript@5.8.3):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       chokidar: 4.0.3
@@ -1722,7 +1722,7 @@ snapshots:
       picocolors: 1.0.1
       sade: 1.8.1
       svelte: 4.2.19
-      typescript: 5.6.3
+      typescript: 5.8.3
     transitivePeerDependencies:
       - picomatch
 
@@ -1775,7 +1775,7 @@ snapshots:
 
   tslib@2.7.0: {}
 
-  typescript@5.6.3: {}
+  typescript@5.8.3: {}
 
   undici-types@6.19.8:
     optional: true
