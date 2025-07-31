@@ -1,16 +1,20 @@
-import 'leaflet/dist/leaflet.css';
 import {Icon} from 'leaflet';
-Icon.Default.imagePath = '/gpx-viewer/images/';
-
-import 'sweetalert2/src/sweetalert2.scss';
-
 import {Chart, LineController, LineElement, PointElement, CategoryScale, LinearScale, Tooltip} from 'chart.js';
-Chart.register(LineController, LineElement, PointElement, CategoryScale, LinearScale, Tooltip);
-
+import {mount} from 'svelte';
 import App from './App.svelte';
 
-let app = new App({
-    target: document.body,
+import 'leaflet/dist/leaflet.css';
+import 'sweetalert2/src/sweetalert2.scss';
+import './global.css';
+import './leaflet.css';
+import './micromodal.css';
+
+Icon.Default.imagePath = '/gpx-viewer/images/';
+
+Chart.register(LineController, LineElement, PointElement, CategoryScale, LinearScale, Tooltip);
+
+const app = mount(App, {
+    target: document.getElementById('app'),
 });
 
 export default app;
