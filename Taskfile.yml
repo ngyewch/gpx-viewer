@@ -28,3 +28,10 @@ tasks:
     deps: [ build ]
     cmds:
       - pnpm run deploy
+
+  outdated:
+    desc: Outdated
+    aliases: [ dependencyUpdates ]
+    deps: [ install ]
+    cmds:
+      - pnpm outdated
