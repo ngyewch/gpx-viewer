@@ -14,7 +14,7 @@ Icon.Default.imagePath = '/gpx-viewer/images/';
 Chart.register(LineController, LineElement, PointElement, CategoryScale, LinearScale, Tooltip);
 
 const app = mount(App, {
-    target: document.getElementById('app'),
+    target: document.getElementById('app')!,
 });
 
 export default app;
