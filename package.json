@@ -6,8 +6,8 @@
   "scripts": {
     "doDev": "vite",
     "doBuild": "vite build",
-    "check": "svelte-check --tsconfig ./tsconfig.json --compiler-warnings a11y-click-events-have-key-events:ignore",
-    "watch:check": "svelte-check --tsconfig ./tsconfig.json --watch --compiler-warnings a11y-click-events-have-key-events:ignore",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
+    "watch:check": "svelte-check --tsconfig ./tsconfig.app.json --watch --compiler-warnings a11y-click-events-have-key-events:ignore",
     "dev": "run-p watch:check doDev",
     "build": "run-s check doBuild",
     "deploy": "gh-pages -d dist --nojekyll"
@@ -17,6 +17,7 @@
     "@tsconfig/svelte": "5.0.8",
     "@types/leaflet": "1.9.21",
     "@types/micromodal": "0.3.5",
+    "@types/node": "24.12.4",
     "gh-pages": "6.3.0",
     "npm-run-all2": "9.0.1",
     "sass-embedded": "1.100.0",
